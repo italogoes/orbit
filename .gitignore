@@ -1,0 +1,5 @@
+#Backend files
+/backend/node_modules
+
+#Frontend files
+/frontend/node_modules
