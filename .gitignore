@@ -1,5 +1,6 @@
 #Backend files
 /backend/node_modules
+/backend/.env
 
 #Frontend files
 /frontend/node_modules
