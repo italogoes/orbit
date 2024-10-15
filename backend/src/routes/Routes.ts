@@ -2,11 +2,16 @@ import { Router } from "express";
 // Middlewares
 import { AuthMiddleware } from "../middlewares/AuthMiddleware";
 // Controllers
-import { UserController } from "../controllers/UserController";
+import { RegisterUserController } from "../controllers/user/RegisterUserController";
+import { AuthUserController } from "../controllers/user/AuthUserController";
 
 const router = Router();
 
-router.get('/user', AuthMiddleware, UserController.getUser);
-router.post('/user', UserController.createUser);
+// User Routes
+router.get('/api/user', AuthMiddleware, RegisterUserController.getUser);
+router.post('/api/user', RegisterUserController.createUser);
+router.post('/api/login', AuthUserController.loginUser)
+
+
 
 export default router;
