@@ -18,6 +18,12 @@ export class UserController {
         const { name, email, password } = req.body;
 
         try {
+            const userExists = await UserModel.findOne({ where: { email: email } })
+
+            if (userExists) {
+                throw new Error("E-mail já esta cadastrado.");
+            }
+            
             const hashPassword = await bcrypt.hash(password, 10);
 
             const user = await UserModel.create({ name, email, password: hashPassword });
@@ -26,7 +32,7 @@ export class UserController {
 
             res.status(201).json({message: 'Usuário cadastrado com sucesso!', token})
         } catch (error) {
-            res.status(400).json({ error: "Erro ao cadastrar usuário. " + error})   
+            res.status(400).json({ error: `${error}` })   
         }
         
     }
