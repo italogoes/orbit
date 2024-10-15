@@ -19,7 +19,7 @@ export class AuthUserController {
                 return res.status(404).json({ message: "Usuário não existe" });
             }
 
-            const passwordMatch = bcrypt.compare(password, user.password);
+            const passwordMatch = await bcrypt.compare(password, user.password);
 
             if(!passwordMatch){
                 return res.status(401).json({ message: "Senha incorreta" });
