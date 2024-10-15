@@ -6,7 +6,7 @@ dotenv.config();
 
 const JWT_SECRET: any = process.env.KEY_SECRET;
 
-export const AuthMiddleware = (req: any, res: any, next: any) => {
+export const AuthMiddleware = (req: Request | any, res: Response | any, next: NextFunction) => {
     const token = req.header('Authorization')?.replace('Bearer ', '');
 
     if (!token) {
