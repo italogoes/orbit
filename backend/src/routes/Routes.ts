@@ -10,7 +10,7 @@ const router = Router();
 // User Routes
 router.get('/api/user', AuthMiddleware, RegisterUserController.getUser);
 router.post('/api/user', RegisterUserController.createUser);
-router.post('/api/login', AuthUserController.loginUser)
+router.post('/api/login', AuthUserController.loginUser);
 
 
 
