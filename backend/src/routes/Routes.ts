@@ -7,7 +7,11 @@ import { AuthUserController } from "../controllers/user/AuthUserController";
 
 const router = Router();
 
-router.get('/user', AuthMiddleware, RegisterUserController.getUser);
-router.post('/user', RegisterUserController.createUser);
+// User Routes
+router.get('/api/user', AuthMiddleware, RegisterUserController.getUser);
+router.post('/api/user', RegisterUserController.createUser);
+router.post('/api/login', AuthUserController.loginUser)
+
+
 
 export default router;
