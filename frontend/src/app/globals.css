@@ -20,6 +20,7 @@ body{
 body{
   background-color: var(--bs-system-bg);
   font-family: "Inter";
+  display: flex;
 }
 
 h1,h2,h3,h4,h5,h6{
