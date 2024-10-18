@@ -4,3 +4,4 @@
 
 #Frontend files
 /frontend/node_modules
+/frontend/.next
