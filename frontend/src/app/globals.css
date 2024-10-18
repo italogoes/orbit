@@ -1,42 +1,35 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root{
+  --bs-system-bg: #fff;
+  --bs-aside-bg: rgb(247, 247, 248);
+  --bs-heading-color: rgb(34, 37, 42);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
+body{
+  height: 100%;
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+body{
+  background-color: var(--bs-system-bg);
+  font-family: "Inter";
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+h1,h2,h3,h4,h5,h6{
+  color: var(--bs-heading-color);
 }
 
-a {
-  color: inherit;
+a{
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+ul{
+  list-style-type: none;
 }

@@ -1,3 +1,6 @@
+import Link from 'next/link'
+import style from './page.module.css'
+
 export default function Dashboard(){
-    return <h1>Dashboard.</h1>
+    return <Link className={style.link} href="/">Home</Link>
 }
